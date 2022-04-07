@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="resetstylesheet.css" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- js for movies data -->
+    <script defer src="movies-data.js?speed=2"></script>
+    <!-- main.js -->
+    <script defer src="index.js?speed=2"></script>
+  </head>
+  <body>
+    <!-- video -->
+    <video id="background-video" autoplay loop muted>
+      <!-- poster="images/4K Space Starfield Background.mkv" -->
+      <source
+        src="Background-Video/4K Space Starfield Background 1.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <!-- container -->
+    <div id="contianer">
+      <!-- main-nav contains all label[radio buttons] -->
+      <nav id="main-nav">
+        <label>
+          <input
+            name="contract_duration"
+            type="radio"
+            value="All-movies"
+            checked
+          />
+          <div class="radio__radio"></div>
+          All movies
+        </label>
+        <label>
+          <input name="contract_duration" type="radio" value="New-movies" />
+          <div class="radio__radio">
+            <div class="radio_of_radio"></div>
+          </div>
+          New movies
+        </label>
+        <label>
+          <input name="contract_duration" type="radio" value="Avengers" />
+          <div class="radio__radio"></div>
+          Avenger
+        </label>
+
+        <label>
+          <input name="contract_duration" type="radio" value="X-Men" />
+          <div class="radio__radio"></div>
+          X-Men
+        </label>
+        <label>
+          <input name="contract_duration" type="radio" value="Princess" />
+          <div class="radio__radio"></div>
+          Princess
+        </label>
+        <label>
+          <input name="contract_duration" type="radio" value="Batman" />
+          <div class="radio__radio"></div>
+          Batman
+        </label>
+      </nav>
+      <!-- movie-display =showlist  -->
+      <div id="movie-display">
+        <input
+          autocomplete="off"
+          type="search"
+          id="search"
+          placeholder="Search by title or year!"
+        />
+        <!-- The new made li/a/img made by javascript goes here -->
+        <ul id="results"></ul>
+      </div>
+    </div>
+  </body>
+</html>
